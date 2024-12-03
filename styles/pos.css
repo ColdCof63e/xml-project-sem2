@@ -1,7 +1,6 @@
 /* styles.css */
-
 /* Reset some default styles */
-body, h1, h2, p, ul, table {
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -38,7 +37,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd60a; /* Change color on hover */
+    color: #ffd60a;
+    /* Change color on hover */
 }
 
 main {
@@ -68,17 +68,22 @@ input[type="text"] {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px; /* Add some space above the table */
+    margin-top: 10px;
+    /* Add some space above the table */
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ccc;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: center;
-    transition: background-color 0.3s; /* Add transition for background */
+    transition: background-color 0.3s;
+    /* Add transition for background */
 }
 
 th {
@@ -87,11 +92,13 @@ th {
 }
 
 tbody tr {
-    transition: background-color 0.3s; /* Add transition for row */
+    transition: background-color 0.3s;
+    /* Add transition for row */
 }
 
 tbody tr:hover {
-    background-color: #f1c40f; /* Change background color on hover */
+    background-color: #f1c40f;
+    /* Change background color on hover */
 }
 
 footer {
@@ -109,6 +116,7 @@ footer {
     cursor: pointer;
     margin-bottom: 20px;
 }
+
 .tab {
     flex: 1;
     padding: 10px;
@@ -117,12 +125,15 @@ footer {
     border: 1px solid #ccc;
     border-radius: 4px 4px 0 0;
 }
+
 .tab.active {
     background-color: #ddd;
 }
+
 .tab-content {
     display: none;
 }
+
 .tab-content.active {
     display: block;
 }
@@ -160,7 +171,153 @@ footer {
 }
 
 #seasonNavigationBar ul li a.active-season {
-    background-color: #ff9900; /* Highlight color */
+    background-color: #ff9900;
+    /* Highlight color */
     color: black;
     font-weight: bold;
+}
+
+#driverStandingContent table tbody tr {
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+/* Mobile devices (small screens) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Adjust font size for readability */
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Stack the navigation items */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        /* Add space between items */
+    }
+
+    table {
+        font-size: 12px;
+        /* Reduce table font size */
+    }
+
+    #seasonNavigationBar ul {
+        flex-direction: column;
+        /* Stack the navigation items */
+        padding: 5px 0;
+    }
+
+    #seasonNavigationBar ul li {
+        margin: 5px 0;
+        /* Add space between items */
+    }
+
+    .tabs {
+        flex-direction: column;
+        /* Stack the tabs */
+        margin-bottom: 15px;
+    }
+
+    .tab {
+        padding: 8px;
+        /* Adjust tab padding for smaller screens */
+    }
+
+    #driverStandingContent table tbody tr {
+        cursor: pointer;
+        /* Change cursor to pointer on hover */
+    }
+}
+
+/* Tablets and small desktop screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        /* Increase font size slightly */
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        /* Keep the items in a row */
+        justify-content: space-around;
+        /* Distribute space evenly */
+    }
+
+    nav ul li {
+        margin: 0 10px;
+        /* Slightly reduce space between items */
+    }
+
+    table {
+        font-size: 14px;
+        /* Adjust table font size for tablets */
+    }
+
+    #seasonNavigationBar ul {
+        justify-content: space-around;
+        /* Space out the navigation items */
+    }
+
+    .tabs {
+        justify-content: space-between;
+        /* Spread out tabs */
+    }
+
+    #driverStandingContent table tbody tr {
+        cursor: pointer;
+        /* Change cursor to pointer on hover */
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+    body {
+        font-size: 18px;
+        /* Standard font size for larger screens */
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        /* Center the nav items */
+    }
+
+    nav ul li {
+        margin: 0 20px;
+        /* Increase space between items */
+    }
+
+    table {
+        font-size: 16px;
+        /* Increase table font size */
+    }
+
+    #seasonNavigationBar ul {
+        justify-content: center;
+        /* Center the navigation items */
+    }
+
+    .tabs {
+        justify-content: space-evenly;
+        /* Evenly space out the tabs */
+    }
+
+    #driverStandingContent table tbody tr {
+        cursor: pointer;
+        /* Change cursor to pointer on hover */
+    }
 }
