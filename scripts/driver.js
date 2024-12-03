@@ -21,6 +21,7 @@ async function getData() {
 
     // Convert Map values to an array and build driver cards
     uniqueDrivers.forEach(driver => {
+        console.log(driver);
         const driverCard = document.createElement('div');
         driverCard.classList.add('driver-card');
         driverCard.setAttribute('data-driver-number', driver.driver_number);
